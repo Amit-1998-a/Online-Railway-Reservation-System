@@ -1,0 +1,56 @@
+<div class="bg">
+    <div class="Head">
+    <h1>ONLINE RAILWAY RESERVATION SYSTEM</h1>
+        <div class="haa"><br><button class="u" routerLink="/home">Home</button></div>
+        <form action="/action_page.php" style="margin-top: 30px;">
+          <!-- <h3 style="text-align: center;font:bold; background-color: rgb(156, 140, 140); color: rgb(15, 15, 15);">Filter the available trains here:</h3> -->
+          <div style="display: flex; width: 100%;">
+            <div class="form-group" style="display: flex;">
+              <!-- <input class="hh" type="text" [(ngModel)]="text" class="form-control" placeholder="SOURCE" name="text"> -->
+              <!-- <button type="submit" style="margin-left: 15px;" class="btn btn-default" (click)="search()" style="color: honeydew; background: rgb(0, 0, 0);">Submit</button> -->
+            </div>
+              <div class="form-group" style="display: flex;"> 
+              <!-- <input type="text" [(ngModel)]="text1" class="form-control" placeholder="DESTINATION" name="text1" > -->
+    
+              <!-- <button type="submit" style="margin-left: 15px;"  class="btn btn-default" (click)="search1()" style="color: honeydew; background: rgb(0, 0, 0);">Submit</button> -->
+              </div>
+          </div>
+        </form>
+        <br>
+        <br>
+    <div class="generic-container">
+    <div class="panel panel-default">
+      <h2 style="text-align: center; font:bold; color: white; background: linear-gradient(135deg, #71b7e6, #9b59b6);">LIST OF TRAINS AVAILABLE</h2><br><br>
+      <div class="row">
+    
+   
+      <div class="tablecontainer">
+        <table class="table table-dark">
+          <thead class="thead-dark">
+           
+          <tr>
+            <th>TRAIN ID</th>
+            <th>TRAIN NAME</th>
+            <th>FROM</th>
+            <th>TO</th>
+            <th>NUMBER OF BERTHS</th>
+            <th>FARE</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let trai of trains">
+            <td><span>{{trai.trainid}}</span></td>
+            <td><span>{{trai.train_name}}</span></td>
+            <td><span>{{trai.from}}</span></td>
+            <td><span>{{trai.to}}</span></td>
+            <td><span>{{trai.berths}}</span></td>
+            <td><span>{{trai.fare}}</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+  
+  
+  
